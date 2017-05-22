@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.nishchay.tip_calc.MainActivity"
+    android:background="@color/colorgrey">
+
+    <TextView
+        android:id="@+id/billTextView"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/billEditText"
+        android:layout_alignEnd="@+id/finalBillTextView"
+        android:layout_marginBottom="24dp"
+        android:layout_marginLeft="14dp"
+        android:text="@string/bill_text_view" />
+
+    <!-- android:ems defines the width of the EditText box -->
+
+    <EditText
+        android:id="@+id/billEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:ems="5"
+        android:inputType="numberDecimal"
+        android:text="@string/bill_edit_text"
+        android:layout_above="@+id/tipTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="68dp">
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/tipTextView"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:text="@string/tip_text_view"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/finalBillEditText" />
+
+    <EditText
+        android:id="@+id/tipEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:ems="4"
+        android:inputType="numberDecimal"
+        android:text="@string/tip_edit_text"
+        android:layout_below="@+id/tipTextView"
+        android:layout_toStartOf="@+id/changeTipTextView"
+        android:layout_marginTop="25dp" />
+
+    <TextView
+        android:id="@+id/finalBillTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/final_bill_text_view"
+        android:layout_above="@+id/finalBillEditText"
+        android:layout_toEndOf="@+id/tipEditText" />
+
+    <EditText
+        android:id="@+id/finalBillEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="numberDecimal"
+        android:text="@string/final_bill_edit_text"
+        android:layout_marginStart="53dp"
+        android:layout_marginBottom="14dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/changeTipSeekBar" />
+
+    <TextView
+        android:id="@+id/changeTipTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/change_tip_text_view"
+        android:layout_above="@+id/changeTipSeekBar"
+        android:layout_alignStart="@+id/billEditText"
+        android:layout_marginStart="84dp"
+        android:layout_marginBottom="17dp" />
+
+    <!-- android:progress="15" defines the default for the SeekBar -->
+
+    <SeekBar
+        android:id="@+id/changeTipSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progress="15"
+        android:layout_above="@+id/finalBillTextView"
+        android:layout_alignStart="@+id/billEditText"
+        android:layout_marginStart="19dp" />
+
+</RelativeLayout>
